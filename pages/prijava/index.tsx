@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { RegistrationStyled } from "./style";
+import { LoginStyled } from "./style";
 
 export default function Home() {
   const [email, setEmail] = React.useState("");
@@ -25,7 +25,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <RegistrationStyled>
+      <LoginStyled>
         <Image
           src="/images/logo.png"
           alt="Veleri Logo"
@@ -52,14 +52,14 @@ export default function Home() {
             />
           </div>
           <p>
-            Već ste registrirani?{" "}
-            <Link href="/prijava">
-              <b>Prijavite se</b>
+            Nemate račun?{" "}
+            <Link href="/">
+              <b>Registrirajte se</b>
             </Link>
           </p>
-          <button type="submit">Registracija</button>
+          <button type="submit">Prijava</button>
         </form>
-      </RegistrationStyled>
+      </LoginStyled>
     </>
   );
 }
