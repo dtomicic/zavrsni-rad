@@ -1,9 +1,7 @@
-import FormInput from "@/components/FormInput";
+import MobileNavigation from "@/components/Navigation/MobileNavigation";
+import RegistrationPage from "@/components/RegistrationPage";
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { RegistrationStyled } from "./style";
 
 export default function Home() {
   const [email, setEmail] = React.useState("");
@@ -25,41 +23,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <RegistrationStyled>
-        <Image
-          src="/images/logo.png"
-          alt="Veleri Logo"
-          width={292}
-          height={74}
-        />
-        <form>
-          <div className="input-container">
-            <FormInput
-              label={"Email"}
-              value={email}
-              placeholder={"Unesite email adresu"}
-              type={"email"}
-              onChange={handleEmailChange}
-              errorMessage={""}
-            />
-            <FormInput
-              label={"Lozinka"}
-              value={password}
-              placeholder={"Unesite lozinku"}
-              type={"password"}
-              onChange={handlePasswordChange}
-              errorMessage={""}
-            />
-          </div>
-          <p>
-            Već ste registrirani?{" "}
-            <Link href="/prijava">
-              <b>Prijavite se</b>
-            </Link>
-          </p>
-          <button type="submit">Registracija</button>
-        </form>
-      </RegistrationStyled>
+      {/* <RegistrationPage
+        email={email}
+        password={password}
+        handleEmailChange={handleEmailChange}
+        handlePasswordChange={handlePasswordChange}
+      /> */}
+      <MobileNavigation />
     </>
   );
 }
