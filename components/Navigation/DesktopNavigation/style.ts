@@ -7,7 +7,7 @@ export const DesktopNavigationStyled = styled.div`
   background-color: #ffffff;
   border-radius: 0px 20px 20px 0px;
   padding-top: 35px;
-  height: 100vh;
+  min-height: 100vh;
 
   .logo {
     padding-left: 15px;

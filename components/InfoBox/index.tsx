@@ -1,6 +1,6 @@
 import ApplicationsIcon from "../UI/Iconography/ApplicationsIcon";
 import StudentsIcon from "../UI/Iconography/StudentsIcon";
-import WarningIcon from '../UI/Iconography/WarningIcon'
+import WarningIcon from "../UI/Iconography/WarningIcon";
 import { InfoBoxStyled } from "./style";
 
 interface IInfoBoxProps {
@@ -14,21 +14,21 @@ const InfoBox = (props: IInfoBoxProps) => {
 
     const iconDisplay = () => {
         switch (type) {
-            case 'naCekanju':
+            case "naCekanju":
                 return <WarningIcon />;
-            case 'brojStudenata':
+            case "brojStudenata":
                 return <StudentsIcon />;
-            case 'brojPraksi':
-                return <ApplicationsIcon />
+            case "brojPraksi":
+                return <ApplicationsIcon />;
             default:
                 break;
         }
-    }
+    };
     return (
-        <InfoBoxStyled>
-            <div className="type-icon">
-                {iconDisplay()}
-            </div>
+        <InfoBoxStyled type={type}>
+            <div className="type-icon">{iconDisplay()}</div>
+            <p className="number">{number}</p>
+            <p className="label">{label}</p>
         </InfoBoxStyled>
     );
 };
