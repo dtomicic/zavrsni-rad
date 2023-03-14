@@ -1,4 +1,4 @@
-import DesktopNavigation from "@/components/Navigation/DesktopNavigation";
+import Navigation from "@/components/Navigation";
 import RegistrationPage from "@/components/RegistrationPage";
 import Head from "next/head";
 import React from "react";
@@ -29,7 +29,7 @@ export default function Home() {
         handleEmailChange={handleEmailChange}
         handlePasswordChange={handlePasswordChange}
       /> */}
-      <DesktopNavigation />
+      <Navigation />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DesktopNavigationStyled = styled.nav`
+export const DesktopNavigationStyled = styled.div`
   display: flex;
   flex-direction: column;
   width: 225px;

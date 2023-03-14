@@ -15,7 +15,7 @@ export const NavigationMenuStyled = styled.div`
 export const NavigationMenuMainStyled = styled.div<IProps>`
   animation: ${animations.fadeIn} 0.3s ease-in-out;
   position: fixed;
-  display: ${(props) => (props.isOpen ? "flex" : "none")}};
+  display: ${(props) => (props.isOpen ? "flex" : "none")};
   width: 65%;
   flex-direction: column;
   justify-content: space-between;
@@ -92,7 +92,7 @@ export const NavigationMenuMainStyled = styled.div<IProps>`
     .log-out {
         display: flex;
         align-items: center;    
-        padding: 0 35px 0 20px;
+        padding: 0 35px;
         gap: 14px;
         margin-bottom: 15px;
 
@@ -100,6 +100,10 @@ export const NavigationMenuMainStyled = styled.div<IProps>`
             font-size: 14px;
             font-weight: 800;
             color: #414141;
+        }
+
+        svg {
+          width: 20px;
         }
     }
 
@@ -120,7 +124,7 @@ export const NavigationMenuMainStyled = styled.div<IProps>`
 
 export const NavigationMenuOverlayStyled = styled.div<IProps>`
   animation: ${animations.fadeIn} 0.3s ease-in-out;
-  display: ${(props) => (props.isOpen ? "flex" : "none")}};
+  display: ${(props) => (props.isOpen ? "flex" : "none")};
   position: fixed;
   width: 35%;
   height: 100%;
