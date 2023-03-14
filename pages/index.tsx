@@ -1,20 +1,10 @@
+import AdminDashboard from "@/components/AdminDashboard";
 import Navigation from "@/components/Navigation";
-import RegistrationPage from "@/components/RegistrationPage";
 import Head from "next/head";
 import React from "react";
+import { MainContentStyled } from "./style";
 
 export default function Home() {
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
-
-  const handleEmailChange = (value: string) => {
-    setEmail(value);
-  };
-
-  const handlePasswordChange = (value: string) => {
-    setPassword(value);
-  };
-
   return (
     <>
       <Head>
@@ -23,13 +13,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <RegistrationPage
-        email={email}
-        password={password}
-        handleEmailChange={handleEmailChange}
-        handlePasswordChange={handlePasswordChange}
-      /> */}
-      <Navigation />
+      <MainContentStyled>
+        <Navigation />
+        <AdminDashboard />
+      </MainContentStyled>
     </>
   );
 }
